@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     private Vector3 transfer;
     [SerializeField] private float speed = 3.0f;
