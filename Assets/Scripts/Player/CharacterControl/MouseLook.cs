@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    [SerializeField] private Texture2D scope;
+    [SerializeField] private float scopeSize;
     [SerializeField] private float sensivity = 3.0f;
 
     private float minY = -45.0f;
@@ -42,5 +44,10 @@ public class MouseLook : MonoBehaviour
     private float ClampAngle(float angle, float min, float max)
     {
         return Mathf.Clamp(angle, min, max);
+    }
+
+    private void OnGUI()
+    {
+        GUI.DrawTexture(new Rect((Screen.width - scopeSize) / 2, (Screen.height - scopeSize) / 2, scopeSize, scopeSize), scope);
     }
 }
