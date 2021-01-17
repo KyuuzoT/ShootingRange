@@ -1,26 +1,38 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetBulletHoles : MonoBehaviour
 {
     [SerializeField] private GameObject bulletHole;
+    private int bulletHoleCount = 0;
+    internal bool isTutorial = true;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        Debug.Log(other);
-        if(other.tag.Equals("Bullet"))
+        if(bulletHoleCount >= 5)
         {
-            Debug.Log("BULLET!");
+            Debug.Log("Tutorial End!");
+            isTutorial = false;
+            //StartCoroutine(DestroyTarget());
         }
     }
 
+    //private IEnumerator DestroyTarget()
+    //{
+    //    yield return new WaitForSeconds(5.0f);
+    //    Destroy(gameObject);
+    //}
+
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
+        Debug.Log(collision.contactCount);
         if(collision.transform.tag.Equals("Bullet"))
         {
             var hole = Instantiate(bulletHole, collision.GetContact(0).point, bulletHole.transform.rotation);
+            hole.transform.SetParent(this.transform);
+            bulletHoleCount++;
         }
     }
 }
