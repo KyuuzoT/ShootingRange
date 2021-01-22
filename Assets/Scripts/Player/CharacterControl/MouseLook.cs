@@ -9,8 +9,8 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private float scopeSize;
     [SerializeField] private float sensivity = 3.0f;
 
-    private float minY = -45.0f;
-    private float maxY = 45.0f;
+    private float minY = -60.0f;
+    private float maxY = 60.0f;
 
     private float rotationX;
     private float rotationY;

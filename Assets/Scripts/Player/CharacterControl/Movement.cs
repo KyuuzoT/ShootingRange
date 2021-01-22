@@ -9,6 +9,11 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        //MovementHandler();
+    }
+
+    private void MovementHandler()
+    {
         var cameraForward = transform.GetComponentInChildren<MouseLook>().transform.forward;
         transform.forward = new Vector3(cameraForward.x, 0, cameraForward.z);
 

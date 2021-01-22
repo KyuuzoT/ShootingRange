@@ -11,19 +11,8 @@ public class TargetBulletHoles : MonoBehaviour
 
     private void Update()
     {
-        if(bulletHoleCount >= 5)
-        {
-            Debug.Log("Tutorial End!");
-            isTutorial = false;
-            //StartCoroutine(DestroyTarget());
-        }
-    }
 
-    //private IEnumerator DestroyTarget()
-    //{
-    //    yield return new WaitForSeconds(5.0f);
-    //    Destroy(gameObject);
-    //}
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
