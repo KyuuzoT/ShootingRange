@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
         {
             var instantiatedBullet = Instantiate(bullet, instantiationPoint.transform.position, transform.rotation);
             instantiatedBullet.GetComponent<Rigidbody>().AddForce(instantiatedBullet.transform.forward * bulletSpeed, ForceMode.Impulse);
+            numberOfBullets++;
             StartCoroutine(DestroyBullet(instantiatedBullet));
         }
 
@@ -38,7 +39,7 @@ public class Shooting : MonoBehaviour
     private IEnumerator DestroyBullet(GameObject bullet)
     {
         yield return new WaitForSeconds(timeBeforeDestruction);
-        numberOfBullets++;
+        
         Destroy(bullet);
     }
 }

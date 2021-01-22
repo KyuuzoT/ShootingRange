@@ -8,7 +8,10 @@ public class PlatformBehaviour : MonoBehaviour
 {
     internal List<Transform> cubesOnPlatform = new List<Transform>();
     [SerializeField] private float speed = 5.0f;
-    [SerializeField] private Transform spawnPoint;
+    //[SerializeField] private Transform spawnPoint;
+
+    [SerializeField]private Transform manager;
+
     void Awake()
     {
         cubesOnPlatform.AddRange(transform.GetComponentsInChildren<Transform>().Where(x => x.gameObject.name.Contains("Cube")));
@@ -25,19 +28,20 @@ public class PlatformBehaviour : MonoBehaviour
     {
         if(cubesOnPlatform.Count<=0)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
             StartCoroutine(DestroyTarget());
         }
         else
         {
             float yAxis = Mathf.Lerp(transform.position.y, 0, Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, yAxis, transform.position.z);
+            transform.position = new Vector3(transform.position.x, yAxis , transform.position.z);
         }
     }
 
     private IEnumerator DestroyTarget()
     {
         yield return new WaitForSeconds(5);
+        manager.GetComponent<SpawnPointsManager>().platformsOnScene.Remove(transform);
         Destroy(transform.gameObject);
     }
 }

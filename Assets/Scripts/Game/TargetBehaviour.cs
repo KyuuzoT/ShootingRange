@@ -7,11 +7,10 @@ using UnityEngine;
 public class TargetBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform deathZone;
+    [SerializeField] private int pointsPerTarget = 10;
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.transform.name);
-        Debug.Log(collision.transform.name.Equals(deathZone.name));
         if(collision.transform.name.Equals(deathZone.name))
         {
             var platform = transform.parent.GetComponent<PlatformBehaviour>();
@@ -24,7 +23,7 @@ public class TargetBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         Debug.Log("Destroy: " + transform.name);
-        GlobalVars.ScorePoints += 1;
+        GlobalVars.ScorePoints += pointsPerTarget;
         Destroy(transform.gameObject);
     }
 }

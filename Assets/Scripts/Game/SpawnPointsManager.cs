@@ -23,6 +23,7 @@ public class SpawnPointsManager : MonoBehaviour
     {
         System.Random rnd = new System.Random();
 
+        Debug.Log("Count: " + platformsOnScene.Count);
         if (platformsOnScene.Count <= 0)
         {
             var platform = platformPrefabs[rnd.Next(0, platformPrefabs.Count-1)];
