@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4570923769314746581}
   - component: {fileID: 1768746674369713183}
   - component: {fileID: 1101776739156883973}
+  - component: {fileID: 1381776862237957904}
   m_Layer: 0
   m_Name: Platform1
   m_TagString: Untagged
@@ -100,6 +101,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: e1eb5ece85d7114498fdafd1d415085c, type: 3}
+--- !u!114 &1381776862237957904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255339355837199818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20d76e8ce624a641a73db7fb9b1e224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  spawnPoint: {fileID: 0}
 --- !u!1 &1101776737821835964
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +128,7 @@ GameObject:
   - component: {fileID: 1101776737821835961}
   - component: {fileID: 1101776737821835962}
   - component: {fileID: 1101776737821835959}
+  - component: {fileID: 657880585}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -210,6 +226,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &657880585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776737821835964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
 --- !u!1 &1101776737931889166
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +253,7 @@ GameObject:
   - component: {fileID: 1101776737931889163}
   - component: {fileID: 1101776737931889164}
   - component: {fileID: 1101776737931889161}
+  - component: {fileID: 782679735}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -320,6 +351,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &782679735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776737931889166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
 --- !u!1 &1101776737953081949
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +378,7 @@ GameObject:
   - component: {fileID: 1101776737953081946}
   - component: {fileID: 1101776737953081947}
   - component: {fileID: 1101776737953081944}
+  - component: {fileID: 803593960}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -430,6 +476,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &803593960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776737953081949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
 --- !u!1 &1101776737994524549
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +503,7 @@ GameObject:
   - component: {fileID: 1101776737994524546}
   - component: {fileID: 1101776737994524547}
   - component: {fileID: 1101776737994524544}
+  - component: {fileID: 829256512}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -540,6 +601,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &829256512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776737994524549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
 --- !u!1 &1101776738605161157
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +628,7 @@ GameObject:
   - component: {fileID: 1101776738605161154}
   - component: {fileID: 1101776738605161155}
   - component: {fileID: 1101776738605161152}
+  - component: {fileID: 382201472}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -650,6 +726,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &382201472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776738605161157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
 --- !u!1 &1101776739110880876
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +753,7 @@ GameObject:
   - component: {fileID: 1101776739110880873}
   - component: {fileID: 1101776739110880874}
   - component: {fileID: 1101776739110880871}
+  - component: {fileID: 1960882905}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -760,3 +851,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1960882905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101776739110880876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aedef98b6004a4fb8e2785cdfa16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 4657747846592046928, guid: 482d808384b3c944aa71d25e92c70106,
+    type: 3}
